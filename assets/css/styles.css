@@ -1,0 +1,242 @@
+html,
+body {
+  height: 100%;
+}
+#navContainer {
+  position: fixed;
+  z-index: 1;
+  background: white;
+}
+#bodyContainer {
+  padding-top: 290px;
+}
+.dropright .dropdown-toggle::after {
+  vertical-align: 0;
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  transform: rotate(90deg);
+}
+.dropdown-toggle {
+  background-color: transparent;
+  text-align: left;
+}
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+}
+.tcards li {
+  position: relative;
+}
+.tcards li .leftDrop {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  background-color: #e7e7e7;
+  display: none;
+  font-size: 10px;
+}
+.tcards li:hover .leftDrop {
+  display: inline-block;
+}
+.todoDropdownHolder.dropdown-menu {
+  background: transparent !important;
+}
+.todoDropdownHolder .dropdown-item {
+  background-color: rgba(0, 0, 0, 0.54);
+  color: white;
+  display: inline-block;
+  width: unset;
+  margin: 3px;
+  font-size: 10px;
+  padding-left: 10px;
+  transition: all 0.3s;
+}
+.todoDropdownHolder .dropdown-item:hover {
+  margin-left: 15px;
+  transition: all 0.3s;
+}
+.box {
+  margin-right: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: none !important;
+}
+.tcards > li {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.renameBtn {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+.list-group-item {
+  word-break: break-all;
+}
+#listNav {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+  width: 100vw;
+  list-style: none;
+  transition: all 0.4s;
+}
+#listNav li {
+  margin: 3px 0;
+  flex: 0 0 35px;
+  min-height: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+#listNav li a {
+  width: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  background: #17a3b898;
+}
+#listNav li a .line {
+  width: 70%;
+  height: 1px;
+  background: white;
+  display: block;
+}
+#listNav li:hover a {
+  background: #17a3b8;
+  transform: translateY(-2px);
+  transition: all 0.4s;
+}
+#listNav li:hover span {
+  display: block;
+}
+.navOpserver {
+  background: #17a3b898 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.navOpserver + span {
+  border-radius: 4px;
+  text-transform: capitalize;
+  max-width: 50px;
+  word-break: break-all;
+  display: block;
+  transform: rotate(-90deg);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+li:hover .navOpserver + span {
+  transform: rotate(0deg);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.listSpan {
+  font-size: 10px;
+  display: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 17.75rem auto;
+  }
+}
+
+.list-group-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+.list-group {
+  min-height: 60px;
+}
+
+.modal-header > h4 {
+  pointer-events: none;
+}
+
+.modal-content input {
+  position: absolute;
+  outline: none;
+  width: 100%;
+  height: inherit;
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+}
+.modal-header {
+  position: relative;
+  height: 68px;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-header-input {
+  margin-top: 3px;
+  padding: 16px;
+}
+
+.modal-body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.modal-body-input {
+  top: 3px;
+  padding: 16px;
+  outline: none;
+}
+
+span .badge {
+  z-index: -1;
+  pointer-events: none;
+}
+
+.drop-indicator {
+  box-shadow: 10px 10px 60px 0px rgba(122, 122, 122, 1);
+  transition: ease 50ms;
+}
+
+.modal-header-tooltip {
+  display: none;
+}
+
+.modal-header:hover .modal-header-tooltip {
+  display: block;
+  z-index: 999;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  font-size: 13px;
+  opacity: 0.6;
+  background: #00a2b9;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 12px;
+}
+.modal-body:hover .modal-header-tooltip {
+  display: block;
+  z-index: 999;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  font-size: 13px;
+  opacity: 0.6;
+  background: #00a2b9;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 12px;
+}
+
+.modal-header-input:focus ~ .modal-header-tooltip,
+.modal-body-input:focus ~ .modal-header-tooltip {
+  display: none;
+}
